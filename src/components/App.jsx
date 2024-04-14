@@ -9,8 +9,8 @@ const appStyles = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  fontSize: 40,
-  color: '#010101',
+  // fontSize: 40,
+  // color: '#010101',
 };
 
 export class App extends Component {
