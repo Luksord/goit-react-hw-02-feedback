@@ -1,4 +1,4 @@
-import { Section } from './Section/Section';
+import React, { Component } from 'react';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Notification } from './Notification/Notification';
 import { Statistics } from './Statistics/Statistics';
@@ -13,7 +13,7 @@ const appStyles = {
   color: '#010101',
 };
 
-class App extends Component {
+export class App extends Component {
   state = {
     good: 0,
     neutral: 0,
@@ -58,7 +58,7 @@ class App extends Component {
             options={this.state}
             onLeaveFeedback={this.handleFeedback}
           />
-          {total === 0 ? (
+          {this.total === 0 ? (
             <Notification message="There is no feedback" />
           ) : (
             <Statistics
